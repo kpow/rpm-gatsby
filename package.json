@@ -1,16 +1,9 @@
 {
-  "name": "@stackrole/gatsby-starter-foundation",
-  "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
+  "name": "rpm",
+  "description": "",
   "version": "2.0.0",
-  "author": "Stackrole <stackrole@gmail.com>",
+  "author": "",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stackrole/gatsby-starter-foundation.git"
-  },
-  "bugs": {
-    "url": "https://github.com/stackrole/gatsby-starter-foundation/issues"
-  },
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "develop": "gatsby develop",
@@ -27,7 +20,7 @@
     "gatsby-plugin-google-analytics": "^3.1.0",
     "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-manifest": "^3.1.0",
-    "gatsby-plugin-netlify-cms": "5.1.0",
+    "gatsby-plugin-netlify-cms": "5.1.4",
     "gatsby-plugin-netlify-cms-paths": "^1.3.0",
     "gatsby-plugin-offline": "^4.1.0",
     "gatsby-plugin-react-helmet": "^4.1.0",

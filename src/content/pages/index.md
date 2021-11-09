@@ -1,12 +1,12 @@
 ---
 template: index-page
 slug: /
-title: Wyatt Morriss
+title: Richmond Pug Meetup
 tagline: Graphic Designer
-featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
+featuredImage: /assets/team-cats.jpg
 cta:
-  ctaText: Know more
-  ctaLink: /about
+  ctaText: Visit us on Meetup
+  ctaLink: http://meetup.com/richmondpug/
 ---
 
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+One Saturday a month, Richmond's finest pugs get together for romping, snorting. and general pug goodness. Established in 2005. Roosevelt took over as President Pug in 2021 with Maeby as her VP. If you and your pug are in the area and want to join Richmond Pug Meetup and attend our meetups, we love adding more pugs to our pack! Just click below to be taken to our page on Meetup. Please remember, dog park rules must be followed by all pugs and their owners.
