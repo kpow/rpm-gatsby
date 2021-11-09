@@ -3,7 +3,7 @@ template: index-page
 slug: /
 title: Richmond Pug Meetup
 tagline: Graphic Designer
-featuredImage: /assets/team-cats.jpg
+featuredImage: /assets/slider_img_3.jpg
 cta:
   ctaText: Visit us on Meetup
   ctaLink: http://meetup.com/richmondpug/
