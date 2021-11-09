@@ -13,9 +13,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "engines": {
-    "node": ">=14.15.0"
-  },
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
     "@theme-ui/color": "^0.12.0",
