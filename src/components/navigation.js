@@ -50,7 +50,7 @@ class Navigation extends React.Component {
       </ListLink>
     ))
     return (
-      <nav className="site-navigation" sx={navStyle.menu}>
+      <nav className="site-navigation">
         <button
           onClick={this.handleToggleClick}
           className={"menu-trigger" + (this.state.showMenu ? " is-active" : "")}
@@ -64,8 +64,8 @@ class Navigation extends React.Component {
         </button>
         <ul>
           {listMenuItems}
-          <div sx={navStyle.border}></div>
-          <div sx={navStyle.theme}>
+          <div></div>
+          <div>
             <Theme />
           </div>
         </ul>
@@ -75,20 +75,3 @@ class Navigation extends React.Component {
 }
 
 export default Navigation
-
-const navStyle = {
-  menu: {
-    ul: {
-      bg: "siteColor",
-    },
-  },
-  theme: {
-    display: ["block", "block", "block", "none"],
-    p: " 25px 20px 20px",
-  },
-  border: {
-    bg: "borderColor",
-    borderTop: "1px solid transparent",
-    display: ["block", "block", "block", "none"],
-  },
-}

@@ -15,12 +15,7 @@ const NotFound = () => (
       }}
     >
       <header>
-        <RiSkullLine
-          style={{
-            fontSize: "128px",
-            color: "var(--primary-color)",
-          }}
-        />
+        <RiSkullLine />
         <h1>Oops we did not expect that to happen</h1>
         <p>
           Have you wondered into the unknow. Let us help you, Please take a look

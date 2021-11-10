@@ -201,11 +201,7 @@ const HomePage = ({ data }) => {
         <div>
           <h1 className="title">{frontmatter.title}</h1>
           <p
-            className="tagline"
-            sx={{
-              color: "muted",
-            }}
-          >
+            className="tagline">
             {frontmatter.tagline}
           </p>
           <div
@@ -215,9 +211,6 @@ const HomePage = ({ data }) => {
           <Link
             to={frontmatter.cta.ctaLink}
             className="button"
-            sx={{
-              variant: "variants.button",
-            }}
           >
             {frontmatter.cta.ctaText}
             <span className="icon -right">
@@ -226,9 +219,6 @@ const HomePage = ({ data }) => {
           </Link>
           <div
             className="social-icons"
-            sx={{
-              variant: "variants.socialIcons",
-            }}
           >
             {sIcons}
           </div>

@@ -6,9 +6,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 const PostCard = ({ data }) => (
   <article
     className="post-card"
-    sx={{
-      bg: "cardBg",
-    }}
   >
     {data.frontmatter.featuredImage ? (
       <Link to={data.frontmatter.slug}>
@@ -25,18 +22,12 @@ const PostCard = ({ data }) => (
       <h2 className="title">
         <Link
           to={data.frontmatter.slug}
-          sx={{
-            variant: "links.postLink",
-          }}
         >
           {data.frontmatter.title}
         </Link>
       </h2>
       <p
         className="meta"
-        sx={{
-          color: "muted",
-        }}
       >
         <time>{data.frontmatter.date}</time>
       </p>
