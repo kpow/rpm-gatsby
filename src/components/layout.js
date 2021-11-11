@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -8,7 +7,6 @@ import Navigation from "./navigation"
 
 // import "../assets/scss/style.scss"
 import Footer from "./footer"
-import Theme from "../components/theme"
 import Search from "../components/search"
 
 const query = graphql`
@@ -40,7 +38,6 @@ const Layout = ({ children, className, props }) => {
         </div>
         <div>
           <Search searchIndex={siteSearchIndex.index} />
-          <Theme />
         </div>
       </Header>
       <main className={"container " + className}>{children}</main>
