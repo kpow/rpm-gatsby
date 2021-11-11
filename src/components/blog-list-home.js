@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import React from "react"
 import { Link } from "gatsby"
 import { RiArrowDownLine, RiArrowRightSLine } from "react-icons/ri"
 
@@ -21,16 +20,13 @@ const PostMaker = ({ data }) => (
         <RiArrowDownLine />
       </span>
     </h2>
-    <div className="grids col-1 sm-2 lg-3">{data}</div>
+    <div className="">{data}</div>
     <Link
       className="button"
       to="/blog"
-      sx={{
-        variant: "variants.button",
-      }}
     >
       See more
-      <span className="icon -right">
+      <span>
         <RiArrowRightSLine />
       </span>
     </Link>

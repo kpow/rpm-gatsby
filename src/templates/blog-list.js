@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
@@ -113,7 +111,7 @@ class BlogIndex extends React.Component {
         <Seo
           title={"Blog — Page " + currentPage + " of " + numPages}
           description={
-            "Stackrole base blog page " + currentPage + " of " + numPages
+            "boom " + currentPage + " of " + numPages
           }
         />
         <h1>Blog</h1>

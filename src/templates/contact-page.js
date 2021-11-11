@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import React from "react"
 import { graphql } from "gatsby"
 import { RiSendPlane2Line } from "react-icons/ri"
 
@@ -75,9 +74,6 @@ const Contact = ({ data }) => {
           <p className="text-align-right">
             <button
               className="button"
-              sx={{
-                variant: "variants.button",
-              }}
               type="submit"
             >
               Send Message{" "}

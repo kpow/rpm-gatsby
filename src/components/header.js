@@ -1,12 +1,8 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import React from "react"
 
 const Header = ({ children }) => (
   <header
     className="site-header"
-    sx={{
-      bg: "siteColor",
-    }}
   >
     {children}
   </header>
