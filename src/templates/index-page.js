@@ -198,7 +198,7 @@ const HomePage = ({ data }) => {
       <Seo />
       <div className="home-banner grids col-1 sm-2">
         <div>
-          <h1 className="title">{frontmatter.title}</h1>
+          <h1 className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">{frontmatter.title}</h1>
           <p
             className="tagline">
             {frontmatter.tagline}

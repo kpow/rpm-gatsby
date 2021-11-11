@@ -5,7 +5,7 @@ import Header from "./header"
 import Logo from "./logo"
 import Navigation from "./navigation"
 
-// import "../assets/scss/style.scss"
+import "../assets/scss/style.scss"
 import Footer from "./footer"
 import Search from "../components/search"
 
