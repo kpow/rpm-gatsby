@@ -89,6 +89,7 @@ const Pagination = ({ isFirst, isLast, prevPage, numPages, blogSlug, nextPage, c
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props;
+    // eslint-disable-next-line react/destructuring-assignment
     const { currentPage, numPages } = this.props.pageContext;
     const blogSlug = '/blog/';
     const isFirst = currentPage === 1;

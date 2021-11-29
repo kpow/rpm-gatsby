@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const Header = ({ children }) => (
   <header
@@ -6,6 +6,6 @@ const Header = ({ children }) => (
   >
     {children}
   </header>
-)
+);
 
-export default Header
+export default Header;

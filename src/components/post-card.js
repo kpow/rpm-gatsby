@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React from 'react';
+import { Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 const PostCard = ({ data }) => (
   <article
@@ -10,12 +10,12 @@ const PostCard = ({ data }) => (
       <Link to={data.frontmatter.slug}>
         <GatsbyImage
           image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
-          alt={data.frontmatter.title + " - Featured image"}
+          alt={`${data.frontmatter.title} - Featured image`}
           className="featured-image"
         />
       </Link>
     ) : (
-      ""
+      ''
     )}
     <div className="post-content">
       <h2 className="title">
@@ -32,6 +32,6 @@ const PostCard = ({ data }) => (
       </p>
     </div>
   </article>
-)
+);
 
-export default PostCard
+export default PostCard;

@@ -1,17 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
-import { RiHeart2Line } from "react-icons/ri"
+import React from 'react';
 
 const Footer = () => (
   <footer
     className="site-footer"
   >
     <div className="container">
-      <p>
-      
-      </p>
+      <p />
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
