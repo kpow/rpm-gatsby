@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { RiSendPlane2Line } from "react-icons/ri"
+import React from 'react';
+import { graphql } from 'gatsby';
+import { RiSendPlane2Line } from 'react-icons/ri';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
 export const pageQuery = graphql`
   query ContactQuery($id: String!) {
@@ -21,17 +21,34 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
+
+const contactStyles = {
+  contactPage: {
+    input: {
+      border: '6px solid',
+      borderColor: 'inputBorder',
+      bg: 'inputBackground',
+      outline: 'none',
+    },
+    textarea: {
+      border: '6px solid',
+      borderColor: 'inputBorder',
+      bg: 'inputBackground',
+      outline: 'none',
+    },
+  },
+};
 
 const Contact = ({ data }) => {
-  const { markdownRemark, site } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark, site } = data; // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout className="contact-page" sx={contactStyles.contactPage}>
       <Seo
         title={frontmatter.title}
-        description={frontmatter.title + " " + site.siteMetadata.title}
+        description={`${frontmatter.title} ${site.siteMetadata.title}`}
       />
       <div className="wrapper">
         <h1>{frontmatter.title}</h1>
@@ -68,7 +85,11 @@ const Contact = ({ data }) => {
           </p>
           <p>
             <label>
-              Message<textarea name="message" required></textarea>
+              Message
+              <textarea
+                name="message"
+                required
+              />
             </label>
           </p>
           <p className="text-align-right">
@@ -76,7 +97,8 @@ const Contact = ({ data }) => {
               className="button"
               type="submit"
             >
-              Send Message{" "}
+              Send Message
+              {' '}
               <span className="icon -right">
                 <RiSendPlane2Line />
               </span>
@@ -85,24 +107,7 @@ const Contact = ({ data }) => {
         </form>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Contact
-
-const contactStyles = {
-  contactPage: {
-    input: {
-      border: "6px solid",
-      borderColor: "inputBorder",
-      bg: "inputBackground",
-      outline: "none",
-    },
-    textarea: {
-      border: "6px solid",
-      borderColor: "inputBorder",
-      bg: "inputBackground",
-      outline: "none",
-    },
-  },
-}
+export default Contact;

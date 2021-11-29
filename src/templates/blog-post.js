@@ -1,84 +1,82 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { RiArrowRightLine, RiArrowLeftLine } from 'react-icons/ri';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
 const styles = {
-  "article blockquote": {
-    "background-color": "cardBg",
+  'article blockquote': {
+    'background-color': 'cardBg',
   },
   pagination: {
     a: {
-      color: "muted",
-      "&.is-active": {
-        color: "text",
+      color: 'muted',
+      '&.is-active': {
+        color: 'text',
       },
-      "&:hover": {
-        color: "text",
+      '&:hover': {
+        color: 'text',
       },
     },
   },
-}
+};
 
-const Pagination = props => (
+const Pagination = ({ previous, next }) => (
   <div className="pagination -post" sx={styles.pagination}>
     <ul>
-      {props.previous && props.previous.frontmatter.template === "blog-post" && (
+      {previous && previous.frontmatter.template === 'blog-post' && (
         <li>
-          <Link to={props.previous.frontmatter.slug} rel="prev">
-            <p
-              sx={{
-                color: "muted",
-              }}
-            >
+          <Link to={previous.frontmatter.slug} rel="prev">
+            <p>
               <span className="icon -left">
                 <RiArrowLeftLine />
-              </span>{" "}
+              </span>
+              {' '}
               Previous
             </p>
             <span className="page-title">
-              {props.previous.frontmatter.title}
+              {previous.frontmatter.title}
             </span>
           </Link>
         </li>
       )}
-      {props.next && props.next.frontmatter.template === "blog-post" && (
+      {next && next.frontmatter.template === 'blog-post' && (
         <li>
-          <Link to={props.next.frontmatter.slug} rel="next">
+          <Link to={next.frontmatter.slug} rel="next">
             <p
               sx={{
-                color: "muted",
+                color: 'muted',
               }}
             >
-              Next{" "}
+              Next
+              {' '}
               <span className="icon -right">
                 <RiArrowRightLine />
               </span>
             </p>
-            <span className="page-title">{props.next.frontmatter.title}</span>
+            <span className="page-title">{next.frontmatter.title}</span>
           </Link>
         </li>
       )}
     </ul>
   </div>
-)
+);
 
 const Post = ({ data, pageContext }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html, excerpt } = markdownRemark
+  const { markdownRemark } = data; // data.markdownRemark holds your post data
+  const { frontmatter, html, excerpt } = markdownRemark;
 
   const Image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
-    : ""
-  const { previous, next } = pageContext
+    : '';
+  const { previous, next } = pageContext;
 
-  let props = {
+  const props = {
     previous,
     next,
-  }
+  };
 
   return (
     <Layout className="page">
@@ -88,7 +86,7 @@ const Post = ({ data, pageContext }) => {
           frontmatter.description ? frontmatter.description : excerpt
         }
         image={Image}
-        article={true}
+        article
       />
       <article className="blog-post">
         <header className="featured-banner">
@@ -99,25 +97,26 @@ const Post = ({ data, pageContext }) => {
           {Image ? (
             <GatsbyImage
               image={Image}
-              alt={frontmatter.title + " - Featured image"}
+              alt={`${frontmatter.title} - Featured image`}
               className="featured-image"
             />
           ) : (
-            ""
+            ''
           )}
         </header>
 
         <div
           className="blog-post-content"
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </article>
       {(previous || next) && <Pagination {...props} />}
     </Layout>
-  )
-}
+  );
+};
 
-export default Post
+export default Post;
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String!) {
@@ -138,4 +137,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

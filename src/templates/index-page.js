@@ -1,8 +1,7 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { RiArrowRightSLine } from "react-icons/ri"
-import {
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { RiArrowRightSLine,
   RiFacebookBoxFill,
   RiTwitterFill,
   RiLinkedinBoxFill,
@@ -17,13 +16,13 @@ import {
   RiDribbbleFill,
   RiMediumFill,
   RiBehanceFill,
-} from "react-icons/ri"
-import { FaWordpress, FaVk } from "react-icons/fa"
+} from 'react-icons/ri';
+import { FaWordpress, FaVk } from 'react-icons/fa';
 
-import Layout from "../components/layout"
-import BlogListHome from "../components/blog-list-home"
-import Seo from "../components/seo"
-import Icons from "../util/socialmedia.json"
+import Layout from '../components/layout';
+import BlogListHome from '../components/blog-list-home';
+import Seo from '../components/seo';
+import Icons from '../util/socialmedia.json';
 
 export const pageQuery = graphql`
   query HomeQuery($id: String!) {
@@ -67,144 +66,143 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 const HomePage = ({ data }) => {
-  const { markdownRemark, posts } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark, posts } = data; // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark;
   const Image = frontmatter.featuredImage
     ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
-    : ""
-  const sIcons = Icons.socialIcons.map((icons, index) => {
-    return (
-      <div key={"social icons" + index}>
-        {icons.icon === "facebook" ? (
-          <Link to={icons.url} target="_blank">
-            <RiFacebookBoxFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "twitter" ? (
-          <Link to={icons.url} target="_blank">
-            <RiTwitterFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "linkedin" ? (
-          <Link to={icons.url} target="_blank">
-            <RiLinkedinBoxFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "youtube" ? (
-          <Link to={icons.url} target="_blank">
-            <RiYoutubeFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "instagram" ? (
-          <Link to={icons.url} target="_blank">
-            <RiInstagramFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "rss" ? (
-          <Link to={icons.url} target="_blank">
-            <RiRssFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "github" ? (
-          <Link to={icons.url} target="_blank">
-            <RiGithubFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "telegram" ? (
-          <Link to={icons.url} target="_blank">
-            <RiTelegramFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "pinterest" ? (
-          <Link to={icons.url} target="_blank">
-            <RiPinterestFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "snapchat" ? (
-          <Link to={icons.url} target="_blank">
-            <RiSnapchatFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "skype" ? (
-          <Link to={icons.url} target="_blank">
-            <RiSkypeFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "wordpress" ? (
-          <Link to={icons.url} target="_blank">
-            <FaWordpress />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "dribbble" ? (
-          <Link to={icons.url} target="_blank">
-            <RiDribbbleFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "medium" ? (
-          <Link to={icons.url} target="_blank">
-            <RiMediumFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "behance" ? (
-          <Link to={icons.url} target="_blank">
-            <RiBehanceFill />
-          </Link>
-        ) : (
-          ""
-        )}
-        {icons.icon === "vk" ? (
-          <Link to={icons.url} target="_blank">
-            <FaVk />
-          </Link>
-        ) : (
-          ""
-        )}
-      </div>
-    )
-  })
+    : '';
+  const sIcons = Icons.socialIcons.map((icons, index) => (
+    // eslint-disable-next-line react/no-array-index-key
+    <div key={`social icons${index}`}>
+      {icons.icon === 'facebook' ? (
+        <Link to={icons.url} target="_blank">
+          <RiFacebookBoxFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'twitter' ? (
+        <Link to={icons.url} target="_blank">
+          <RiTwitterFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'linkedin' ? (
+        <Link to={icons.url} target="_blank">
+          <RiLinkedinBoxFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'youtube' ? (
+        <Link to={icons.url} target="_blank">
+          <RiYoutubeFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'instagram' ? (
+        <Link to={icons.url} target="_blank">
+          <RiInstagramFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'rss' ? (
+        <Link to={icons.url} target="_blank">
+          <RiRssFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'github' ? (
+        <Link to={icons.url} target="_blank">
+          <RiGithubFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'telegram' ? (
+        <Link to={icons.url} target="_blank">
+          <RiTelegramFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'pinterest' ? (
+        <Link to={icons.url} target="_blank">
+          <RiPinterestFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'snapchat' ? (
+        <Link to={icons.url} target="_blank">
+          <RiSnapchatFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'skype' ? (
+        <Link to={icons.url} target="_blank">
+          <RiSkypeFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'wordpress' ? (
+        <Link to={icons.url} target="_blank">
+          <FaWordpress />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'dribbble' ? (
+        <Link to={icons.url} target="_blank">
+          <RiDribbbleFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'medium' ? (
+        <Link to={icons.url} target="_blank">
+          <RiMediumFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'behance' ? (
+        <Link to={icons.url} target="_blank">
+          <RiBehanceFill />
+        </Link>
+      ) : (
+        ''
+      )}
+      {icons.icon === 'vk' ? (
+        <Link to={icons.url} target="_blank">
+          <FaVk />
+        </Link>
+      ) : (
+        ''
+      )}
+    </div>
+  ));
   return (
     <Layout>
       <Seo />
       <div className="home-banner grids col-1 sm-2">
         <div>
           <h1 className="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">{frontmatter.title}</h1>
-          <p
-            className="tagline">
+          <p className="tagline">
             {frontmatter.tagline}
           </p>
           <div
             className="description"
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <Link
@@ -226,17 +224,17 @@ const HomePage = ({ data }) => {
           {Image ? (
             <GatsbyImage
               image={Image}
-              alt={frontmatter.title + " - Featured image"}
+              alt={`${frontmatter.title} - Featured image`}
               className="featured-image"
             />
           ) : (
-            ""
+            ''
           )}
         </div>
       </div>
       <BlogListHome data={posts} />
     </Layout>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
