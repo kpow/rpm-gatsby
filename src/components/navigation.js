@@ -21,9 +21,9 @@ const MenuItems = [
   },
 ]
 
-const ListLink = props => (
-  <li>
-    <Link to={props.to}>{props.children}</Link>
+const ListLink = ({to, children}) => (
+  <li className="p-4">
+    <Link to={to}>{children}</Link>
   </li>
 )
 
@@ -48,22 +48,8 @@ class Navigation extends React.Component {
     ))
     return (
       <nav className="site-navigation">
-        <button
-          onClick={this.handleToggleClick}
-          className={"menu-trigger" + (this.state.showMenu ? " is-active" : "")}
-        >
-          <div className="icon-menu-line">
-            <RiMenu3Line />
-          </div>
-          <div className="icon-menu-close">
-            <RiCloseLine />
-          </div>
-        </button>
-        <ul>
+        <ul className="flex justify-around">
           {listMenuItems}
-          <div></div>
-          <div>
-          </div>
         </ul>
       </nav>
     )

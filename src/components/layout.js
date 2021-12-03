@@ -31,14 +31,13 @@ const Layout = ({ children, className }) => {
   return (
     <div className="primary-container">
       <Header>
-        <Logo title={siteTitle} />
-        <div>
-          <div>
-            <Search searchIndex={siteSearchIndex.index} />
-          </div>
+        <div className="flex-grow">
+          <Logo title={siteTitle} />
+        </div>
+        <div className="flex-grow">
           <Navigation />
         </div>
-        <div>
+        <div className="flex-grow flex justify-end">
           <Search searchIndex={siteSearchIndex.index} />
         </div>
       </Header>
