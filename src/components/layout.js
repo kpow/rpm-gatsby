@@ -1,15 +1,13 @@
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable import/no-named-as-default */
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-import Header from './header';
-import Logo from './logo';
-import Navigation from './navigation';
+import Header from "./header"
+import Logo from "./logo"
+import Navigation from "./navigation"
 
-import '../assets/scss/style.scss';
-import Footer from './footer';
-import Search from './search';
+import "../assets/scss/style.scss"
+import Footer from "./footer"
+import Search from "../components/search"
 
 const query = graphql`
   query LayoutQuery {
@@ -22,29 +20,31 @@ const query = graphql`
       index
     }
   }
-`;
+`
 
-const Layout = ({ children, className }) => {
-  const { site, siteSearchIndex } = useStaticQuery(query);
-  const { siteTitle } = site.siteMetadata;
+const Layout = ({ children, className, props }) => {
+  const { site, siteSearchIndex } = useStaticQuery(query)
+  const { siteTitle } = site.siteMetadata
 
   return (
-    <div className="primary-container">
+    <div className="px-0 container mx-auto mb-6 flex flex-col justify-center">
       <Header>
-        <div className="flex-grow">
-          <Logo title={siteTitle} />
-        </div>
-        <div className="flex-grow">
+        <Logo title={siteTitle} />
+        <div >
           <Navigation />
         </div>
-        <div className="flex-grow flex justify-end">
+        <div>
           <Search searchIndex={siteSearchIndex.index} />
         </div>
       </Header>
-      <main className={`container ${className}`}>{children}</main>
+      <main className={`container ${className}`}>  
+        {children}
+      </main>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
+
+
