@@ -119,7 +119,7 @@ class BlogIndex extends React.Component {
           }
         />
         <h1>Blog</h1>
-        <div className="flex">{posts}</div>
+        <div className="flex flex-wrap justify-evenly">{posts}</div>
         <Pagination {...props} />
       </Layout>
     );
