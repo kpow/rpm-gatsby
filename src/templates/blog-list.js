@@ -118,9 +118,11 @@ class BlogIndex extends React.Component {
             `boom ${currentPage} of ${numPages}`
           }
         />
-        <h1>Blog</h1>
-        <div className="flex flex-wrap justify-evenly">{posts}</div>
-        <Pagination {...props} />
+        <div className=" 2xl:max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-12 2xl:px-12 px-4 py-12 mx-auto">
+          <h1>Blog</h1>
+          <div className="flex flex-wrap justify-evenly">{posts}</div>
+          <Pagination {...props} />
+        </div>
       </Layout>
     );
   }
