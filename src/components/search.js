@@ -24,7 +24,7 @@ export default class Search extends Component {
   render() {
     return (
 
-        <div>
+        <div className="flex flex-row-reverse">
           <button
             onClick={this.handleToggleClick}
             className={this.state.showSearch ? "search is-active" : "search"}

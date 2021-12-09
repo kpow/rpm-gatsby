@@ -210,43 +210,18 @@ const HomePage = ({ data }) => {
                 />
               </p>
               <div className="lg:mt-6 max-w-7xl sm:flex mt-0 font-sans">
-                <div className="sm:mt-0 mt-3">
-                  <a href="https://editor.wickedblocks.dev/?ref=wickedblocks" className=" hover:bg-crayon focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-core bg-core text-smoke focus:shadow-none items-center block px-10 py-4 text-base tracking-normal text-center transition duration-500 ease-in-out transform"> Get Started </a>
+                <div className="sm:mt-0 mt-3 flex items-center">
+                {sIcons}
                 </div>
                 <div className="sm:mt-0 sm:ml-3 mt-3">
                   <a
                     href="http://meetup.com/rvapugmeetup/"
-                    className="
-                    focus:shadow-none
-                    items-center
-                    block
-                    px-10
-                    py-3.5
-                    hover:bg-black
-                    bg-montana
-                    text-base text-center text-smoke
-                    transition
-                    duration-500
-                    tracking-normal
-                    ease-in-out
-                    transform
-                    border-2 border-black
-                    hover:border-gray-800
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-offset-2
-                    focus:ring-gray-500
-                  "
+                    className="focus:shadow-none items-center block px-10 py-3.5
+                    text-base text-center tracking-normal border-2 border-black "
                   >
-                    {' '}
-                    Live Demo
-                    {' '}
-
-                  </a>
+                    RPM on Meetup.com
+                   </a>
                 </div>
-              </div>
-              <div className="flex">
-                {sIcons}
               </div>
             </div>
             <div className="lg:w-5/6 lg:max-w-lg xl:mt-0 w-full mt-12">

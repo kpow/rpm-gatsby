@@ -32,7 +32,7 @@ const Contact = ({ data }) => {
         title={frontmatter.title}
         description={`${frontmatter.title} ${site.siteMetadata.title}`}
       />
-      <div className="wrapper">
+      <div className=" w-10/12 mx-auto mt-4">
         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
           <div className="flex-auto p-5 lg:p-10">
             <h4 className="text-2xl font-semibold">

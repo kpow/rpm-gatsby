@@ -28,17 +28,15 @@ const Layout = ({ children, className, props }) => {
   console.log(props);
 
   return (
-    <div className="px-0 container mx-auto mb-6 flex flex-col justify-center">
+    <div className="px-0 mx-auto mb-6 flex flex-col justify-center">
       <Header>
         <Logo title={siteTitle} />
-        <div>
-          <Navigation />
-        </div>
+        <Navigation />
         <div>
           <Search searchIndex={siteSearchIndex.index} />
         </div>
       </Header>
-      <main className={`container ${className}`}>
+      <main className={`container mx-auto ${className}`}>
         {children}
       </main>
       <Footer />

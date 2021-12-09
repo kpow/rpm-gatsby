@@ -25,42 +25,39 @@ const styles = {
 
 const Pagination = ({ previous, next }) => (
   <div className="pagination -post" sx={styles.pagination}>
-    <ul>
+    <ul className="flex">
       {previous && previous.frontmatter.template === 'blog-post' && (
-        <li>
-          <Link to={previous.frontmatter.slug} rel="prev">
+        <li className="flex">
+          <Link className="flex items-center" to={previous.frontmatter.slug} rel="prev">
             <p
-              sx={{
-                color: 'muted',
-              }}
+              className="flex"
             >
               <span className="icon -left">
                 <RiArrowLeftLine />
               </span>
               {' '}
-              Previous
+              Previous -
+              {' '}
             </p>
             <span className="page-title">
-              {previous.frontmatter.title}
+              {' '} - {previous.frontmatter.title}
             </span>
           </Link>
         </li>
       )}
       {next && next.frontmatter.template === 'blog-post' && (
-        <li>
-          <Link to={next.frontmatter.slug} rel="next">
+        <li className="flex">
+          <Link className=" flex flex-row-reverse items-center" to={next.frontmatter.slug} rel="next">
             <p
-              sx={{
-                color: 'muted',
-              }}
+              className="flex"
             >
-              Next
+              - Next
               {' '}
               <span className="icon -right">
                 <RiArrowRightLine />
               </span>
             </p>
-            <span className="page-title">{next.frontmatter.title}</span>
+            <span className="page-title">{next.frontmatter.title} - </span>
           </Link>
         </li>
       )}
