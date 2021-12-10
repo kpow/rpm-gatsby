@@ -1,6 +1,6 @@
 ---
 template: blog-post
-title: "December 2021 Meetup: Pugly Holiday Sweater Edition"
+title: "December 2021: Pugly Holiday Sweater Edition"
 slug: /2021-pugly-holiday-sweater
 date: 2021-12-04 12:46
 description: "December 2021 Meetup: Pugly Holiday Sweater Edition"
