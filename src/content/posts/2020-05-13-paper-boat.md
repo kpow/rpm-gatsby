@@ -1,32 +1,25 @@
 ---
 template: blog-post
-title: Character design
-slug: /character-design
-date: 2020-05-23 23:40
+title: 11th Annual RVA Pug-O-Ween 2021
+slug: /2021_
+date: 2021-10-24 17:14
 description: How to draw a character
-featuredImage: /assets/andrew-seaman-4fi_4q6_efm-unsplash.jpg
+featuredImage: /assets/clean_499194015.jpeg
 ---
+**RVA Pug-O-Ween is back, baby! And this one is for The Gipper...**
 
-In visual arts, a model sheet, also known as a character board, character sheet, character study or simply a study, is a document used to help standardize the appearance, poses, and gestures of a character in arts such as animation, comics, and video games.
+Richmond Pug Meetup invites you to our 11th Annual RVA Pug-O-Ween!!!
+This year's event is being held in honor of Wonton, our President Pug who passed away in June. We are calling the event 'Wizards, Witches + Wonton.'
 
-Model sheets are required when [multiple artists](https://example.com) are involved in the production of an animated film, game, or comic to help maintain continuity in characters from scene to scene. In animation, one animator may only do one shot out of the several hundred that are required to complete an animated feature film. A character not drawn according to the production's standardized model is referred to as off-model.
+**Event Details:**
 
-## For one beautiful night I knew what it was like to be a grandmother. Subjugated, yet honored.
+* Outside at Main Line Brewery. Live music will be by Heather Grace Evans. Food trucks will be The Heavenly Cove Popup and TIffany's Smokehouse Food Truck.
+* To register online for costume contest (you can also register before contest at the event), go to: [https://tinyurl.com/a9vvb7ur.](https://tinyurl.com/a9vvb7ur. "https\://tinyurl.com/a9vvb7ur.") This year our contestants will be wearing numbers!
+* Costumes encouraged for pugs but not required - we know not all pugs cooperate with wearing outfits
+* Costume contest for Cutest, Funniest, Best Group and new category for this year...Scariest!
+* Judging for contest starts at 1:30pm sharp. This year we will be having contestants register before the contest.
+* Fastest eater competition will be held after costume contest and will be with a frozen dog treat (all dogs can compete but only a pug can win, no pug mixes - sorry, you know...snout potential!). Winning pug gets a medal.
+* Our judge panel will select 4 first place costume winners who will receive a trophy and prize basket. 4 second place winners will be chosen and receive a medal. We will also have a special trophy and winner this year - this will be called Wonton's Winner and will be chosen by RPM organizer, Meg.
+* This year's judges are local artist Ed Trask and his daugher, Eleanor.
 
-Yes! In your face, Gandhi! Ah, yes! John Quincy Adding Machine. He struck a chord with the voters when he pledged not to go on a killing spree. What are their names? I could if you hadn't turned on the light and shut off my stereo.
-
-1. Robot 1-X, save my friends! And Zoidberg!
-2. Soon enough.
-3. There's no part of that sentence I didn't like!
-
-### The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep.
-
-Why am I sticky and naked? Did I miss something fun? We're also Santa Claus! Soothe us with sweet lies. Hi, I'm a naughty nurse, and I really need someone to talk to. \$9.95 a minute.
-
-- That could be 'my' beautiful soul sitting naked on a couch. If I could just learn to play this stupid thing.
-- We'll need to have a look inside you with this camera.
-- Fry! Quit doing the right thing, you jerk!
-
-Who said that? SURE you can die! You want to die?! Aww, it's true. I've been hiding it for so long. I videotape every customer that comes in here, so that I may blackmail them later. Ah, computer dating. It's like pimping, but you rarely have to use the phrase "upside your head."
-
-Spare me your space age technobabble, Attila the Hun! We'll go deliver this crate like professionals, and then we'll go home. Aww, it's true. I've been hiding it for so long. Moving along… Please, Don-Bot… look into your hard drive, and open your mercy file!
+![](/assets/highres_499731247.jpeg)
