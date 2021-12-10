@@ -49,10 +49,10 @@ export const blogListQuery = graphql`
 `;
 const Pagination = ({ isFirst, isLast, prevPage, numPages, blogSlug, nextPage, currentPage }) => (
   <div className="pagination" sx={styles.pagination}>
-    <ul>
+    <ul className="flex">
       {!isFirst && (
-        <li>
-          <Link to={prevPage} rel="prev">
+        <li className="flex">
+          <Link className="flex" to={prevPage} rel="prev">
             <span className="icon -left">
               <RiArrowLeftLine />
             </span>
@@ -62,18 +62,18 @@ const Pagination = ({ isFirst, isLast, prevPage, numPages, blogSlug, nextPage, c
         </li>
       )}
       {Array.from({ length: numPages }, (_, i) => (
-        <li key={`pagination-number${i + 1}`}>
+        <li className="flex" key={`pagination-number${i + 1}`}>
           <Link
             to={`${blogSlug}${i === 0 ? '' : i + 1}`}
-            className={currentPage === i + 1 ? 'is-active num' : 'num'}
+            className={currentPage === i + 1 ? 'is-active num flex' : 'num flex'}
           >
             {i + 1}
           </Link>
         </li>
       ))}
       {!isLast && (
-        <li>
-          <Link to={nextPage} rel="next">
+        <li className="flex">
+          <Link className="flex" to={nextPage} rel="next">
             Next
             {' '}
             <span className="icon -right">

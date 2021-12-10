@@ -4,73 +4,73 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 const netlifyCmsPaths = {
-  resolve: `gatsby-plugin-netlify-cms-paths`,
+  resolve: 'gatsby-plugin-netlify-cms-paths',
   options: {
-    cmsConfig: `/static/admin/config.yml`,
+    cmsConfig: '/static/admin/config.yml',
   },
-}
+};
 
-const settings = require("./src/util/site.json")
+const settings = require('./src/util/site.json');
 
 module.exports = {
   siteMetadata: settings.meta,
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/assets/`,
-        name: `assets`,
+        name: 'assets',
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/content/`,
-        name: `content`,
+        name: 'content',
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         gfm: true,
         plugins: [
           netlifyCmsPaths,
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1024,
               showCaptions: true,
               linkImagesToOriginal: false,
               tracedSVG: true,
-              loading: "lazy",
+              loading: 'lazy',
             },
           },
           {
-            resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+            resolve: '@gatsby-contrib/gatsby-plugin-elasticlunr-search',
             options: {
               // Fields to index
-              fields: [`title`, `template`, `slug`],
+              fields: ['title', 'template', 'slug'],
               // How to resolve each field`s value for a supported node type
               resolvers: {
                 // For any node of type MarkdownRemark, list how to resolve the fields` values
                 MarkdownRemark: {
-                  template: node => node.frontmatter.template,
-                  title: node => node.frontmatter.title,
-                  slug: node => node.frontmatter.slug,
+                  template: (node) => node.frontmatter.template,
+                  title: (node) => node.frontmatter.title,
+                  slug: (node) => node.frontmatter.slug,
                 },
               },
               // Optional filter to limit indexed nodes
-              filter: (node, getNode) => node.frontmatter.tags !== "exempt",
+              filter: (node, getNode) => node.frontmatter.tags !== 'exempt',
             },
           },
-          `gatsby-remark-responsive-iframe`,
+          'gatsby-remark-responsive-iframe',
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: false,
@@ -85,35 +85,35 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-plugin-sass',
       options: {
         postCssPlugins: [
-          require("tailwindcss"),
-          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          require('tailwindcss'),
+          require('./tailwind.config.js'), // Optional: Load custom Tailwind CSS configuration
         ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-netlify-cms',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: settings.ga,
       },
     },
-    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Richmond Pug Meetup`,
-        short_name: `RPM`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`,
-        icon: "static" + settings.meta.iconimage,
+        name: 'Richmond Pug Meetup',
+        short_name: 'RPM',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'standalone',
+        icon: `static${settings.meta.iconimage}`,
       },
     },
-    "gatsby-plugin-offline",
+    'gatsby-plugin-offline',
   ],
-}
+};

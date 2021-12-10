@@ -211,7 +211,7 @@ const HomePage = ({ data }) => {
               </p>
               <div className="lg:mt-6 max-w-7xl sm:flex mt-0 font-sans">
                 <div className="sm:mt-0 mt-3 flex items-center">
-                {sIcons}
+                  {sIcons}
                 </div>
                 <div className="sm:mt-0 sm:ml-3 mt-3">
                   <a
@@ -220,7 +220,7 @@ const HomePage = ({ data }) => {
                     text-base text-center tracking-normal border-2 border-black "
                   >
                     RPM on Meetup.com
-                   </a>
+                  </a>
                 </div>
               </div>
             </div>

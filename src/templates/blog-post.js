@@ -6,6 +6,27 @@ import { RiArrowRightLine, RiArrowLeftLine } from 'react-icons/ri';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 
+export const pageQuery = graphql`
+  query BlogPostQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      excerpt(pruneLength: 148)
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        slug
+        title
+        description
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+  }
+`;
+
 const styles = {
   'article blockquote': {
     'background-color': 'cardBg',
@@ -29,35 +50,24 @@ const Pagination = ({ previous, next }) => (
       {previous && previous.frontmatter.template === 'blog-post' && (
         <li className="flex">
           <Link className="flex items-center" to={previous.frontmatter.slug} rel="prev">
-            <p
-              className="flex"
-            >
+            <p className="flex">
               <span className="icon -left">
                 <RiArrowLeftLine />
               </span>
-              {' '}
-              Previous -
-              {' '}
+              Previous
             </p>
-            <span className="page-title">
-              {' '} - {previous.frontmatter.title}
-            </span>
           </Link>
         </li>
       )}
       {next && next.frontmatter.template === 'blog-post' && (
         <li className="flex">
           <Link className=" flex flex-row-reverse items-center" to={next.frontmatter.slug} rel="next">
-            <p
-              className="flex"
-            >
-              - Next
-              {' '}
+            <p className="flex">
+              Next
               <span className="icon -right">
                 <RiArrowRightLine />
               </span>
             </p>
-            <span className="page-title">{next.frontmatter.title} - </span>
           </Link>
         </li>
       )}
@@ -117,24 +127,3 @@ const Post = ({ data, pageContext }) => {
 };
 
 export default Post;
-
-export const pageQuery = graphql`
-  query BlogPostQuery($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      excerpt(pruneLength: 148)
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
-        title
-        description
-        featuredImage {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-      }
-    }
-  }
-`;
