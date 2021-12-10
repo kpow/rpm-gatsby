@@ -8,11 +8,10 @@ featuredImage: /assets/pugly-sweater.jpg
 ---
 ## Last Meetup of 2021!
 
-Small prize for Most Festive Pug!\
-\
-Richmond Christmas Parade is that morning so be advised when planning a route to dog park.\
-\
-Follow dog park rules and practice social distancing.
+**Small prize for Most Festive Pug!**
+
+* Richmond Christmas Parade is that morning so be advised when planning a route to dog park.
+* Follow dog park rules and practice social distancing.
 
 ### Pictures :)
 
